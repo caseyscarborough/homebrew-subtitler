@@ -1,9 +1,9 @@
 class Subtitler < Formula
   desc "A cross-platform, full-featured Java library and CLI utility for working with subtitles."
   homepage "https://github.com/caseyscarborough/subtitler"
-  url "https://github.com/caseyscarborough/subtitler/releases/download/1.0.2/subtitler.zip"
-  sha256 "23bf671ca253d4f0bb99e0954c71473a7c391fb2253ecf0adc72ad7e798475a9"
-  version "1.0.2"
+  url "https://github.com/caseyscarborough/subtitler/releases/download/1.0.3/subtitler.zip"
+  sha256 "052a3f9fc59e586ddd3bf1b532d7f7cf5d05b8c3bc7a66c6479abccdddd65daa"
+  version "1.0.3"
   depends_on "openjdk@11"
 
   def install
@@ -16,6 +16,6 @@ class Subtitler < Formula
   end
 
   test do
-    system "subtitler", "-h"
+    assert_match "subtitler -v", shell_output("Subtitler v1.0.3")
   end
 end
