@@ -3,7 +3,6 @@ class Subtitler < Formula
   homepage "https://github.com/caseyscarborough/subtitler"
   url "https://github.com/caseyscarborough/subtitler/releases/download/1.0.3/subtitler.zip"
   sha256 "052a3f9fc59e586ddd3bf1b532d7f7cf5d05b8c3bc7a66c6479abccdddd65daa"
-  version "1.0.3"
   depends_on "openjdk@11"
 
   def install
