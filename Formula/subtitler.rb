@@ -8,8 +8,8 @@ class Subtitler < Formula
 
   def install
   	rm Dir["bin/subtitler.bat"]
-    libexec.install Dir["*"]
   	chmod 0755, "bin/subtitler"
-    bin.install "bin/subtitler"
+    libexec.install Dir["*"]
+    bin.install libexec/"bin/subtitler"
   end
 end
