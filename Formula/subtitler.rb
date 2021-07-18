@@ -4,11 +4,11 @@ class Subtitler < Formula
   url "https://github.com/caseyscarborough/subtitler/releases/download/1.0.2/subtitler.zip"
   sha256 "23bf671ca253d4f0bb99e0954c71473a7c391fb2253ecf0adc72ad7e798475a9"
   version "1.0.2"
-  depends_on java '8+'
+  depends_on "openjdk@11"
 
   def install
   	rm Dir["bin/subtitler.bat"]
-
+    libexec.install Dir["*"]
   	chmod 0755, "bin/subtitler"
     bin.install "bin/subtitler"
   end
