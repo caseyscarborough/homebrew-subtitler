@@ -9,7 +9,13 @@ class Subtitler < Formula
   def install
   	rm Dir["bin/subtitler.bat"]
   	chmod 0755, "bin/subtitler"
-    libexec.install Dir["*"]
-    bin.install libexec/"bin/subtitler"
+    bin.install "bin/subtitler"
+    (libexec/"lib").install Dir["lib/*"]	
+
+    bin.env_script_all_files(libexec/"bin", JAVA_HOME: Formula["openjdk@11"].opt_prefix)
+  end
+
+  test do
+    system "subtitler", "-h"
   end
 end
