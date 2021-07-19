@@ -1,7 +1,8 @@
 class Subtitler < Formula
   desc "Cross-platform Java library and CLI utility for working with subtitles"
   homepage "https://github.com/caseyscarborough/subtitler"
-  url "https://github.com/caseyscarborough/subtitler/releases/download/1.0.3/subtitler.zip"
+  url "https://github.com/caseyscarborough/subtitler/releases/download/#{version}/subtitler.zip"
+  version "1.0.3"
   sha256 "052a3f9fc59e586ddd3bf1b532d7f7cf5d05b8c3bc7a66c6479abccdddd65daa"
   license "MIT"
 
@@ -17,6 +18,6 @@ class Subtitler < Formula
   end
 
   test do
-    assert_match "Subtitler v1.0.3", shell_output("#{bin}/subtitler -v")
+    assert_match "Subtitler v#{version}", shell_output("#{bin}/subtitler -v")
   end
 end
