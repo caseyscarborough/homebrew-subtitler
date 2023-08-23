@@ -1,8 +1,8 @@
 class Subtitler < Formula
   desc "Cross-platform Java library and CLI utility for working with subtitles"
   homepage "https://github.com/caseyscarborough/subtitler"
-  url "https://github.com/caseyscarborough/subtitler/releases/download/v2.0.0/subtitler-cli.zip"
-  sha256 "c1d8c69e2384f1b4741a512cd6ff33a0f73b43b639c4a2fdc820d499f7171227"
+  url "https://github.com/caseyscarborough/subtitler/releases/download/2.0.0/subtitler-cli.zip"
+  sha256 "4945f5edac9401ee4b7f69da9d91853c56d333eb6a6a118cc07ac577272360b6"
   license "MIT"
 
   depends_on "openjdk@11"
